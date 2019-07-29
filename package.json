@@ -1,0 +1,50 @@
+{
+  "name": "tiny.compiled",
+  "version": "1.0.7",
+  "description": "",
+  "main": "./lib/jsc_loader.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuewuli/tiny.compiled.git"
+  },
+  "author": {
+    "name": "xuewuli",
+    "email": "26448247@qq.com",
+    "url": "https://github.com/xuewuli"
+  },
+  "license": "MIT",
+  "files": [
+    "lib/*.js",
+    "bin/*.js"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "bin": {
+    "jsc": "./bin/jsc_compiler.js",
+    "js-erase": "./bin/js_erase.js"
+  },
+  "scripts": {
+    "jsc-test": "node ./bin/jsc_compiler.js ./tests/10.js",
+    "lint": "eslint ./lib/*.js ./tests/*.js --fix",
+    "test": "mocha --v8-nolazy --timeout=15000 tests/*.test.js",
+    "cover": "nyc --reporter=lcovonly --reporter=text --reporter=text-summary mocha --v8-nolazy --timeout=15000 --reporter spec tests/*.test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.1.4",
+    "mocha-testdata": "^1.2.0",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
+    "tiny-glob": "^0.2.6"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "dependencies": {}
+}
