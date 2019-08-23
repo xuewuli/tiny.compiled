@@ -39,12 +39,13 @@
     "mocha": "^6.1.4",
     "mocha-testdata": "^1.2.0",
     "nyc": "^14.1.1",
-    "prettier": "^1.18.2",
-    "tiny-glob": "^0.2.6"
+    "prettier": "^1.18.2"
   },
   "prettier": {
     "singleQuote": true,
     "printWidth": 100
   },
-  "dependencies": {}
+  "dependencies": {
+    "tiny-glob": "^0.2.6"
+  }
 }
